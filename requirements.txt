@@ -1,0 +1,10 @@
+numpy
+pandas
+requests
+beautifulsoup4
+nltk
+scikit-learn
+matplotlib
+seaborn
+googletrans==4.0.0-rc1
+sqlalchemy
