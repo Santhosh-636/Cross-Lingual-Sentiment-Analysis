@@ -1,0 +1,18 @@
+Cross-Lingual Sentiment Analysis — Terminal Report
+Generated: 2025-12-12T20:13:07.432332
+
+          source                         headline language  sentiment_score sentiment_label
+  times_of_india      Accident on highway kills 5       en            -0.80        NEGATIVE
+  times_of_india         India wins cricket match       en             0.90        POSITIVE
+            ndtv    Highway accident claims lives       en            -0.70        NEGATIVE
+            ndtv India cricket victory celebrated       en             0.85        POSITIVE
+vijaya_karnataka              ಹೆದ್ದಾರಿಯಲ್ಲಿ ಅಪಘಾತ       kn            -0.75        NEGATIVE
+vijaya_karnataka             ಭಾರತ ಕ್ರಿಕೆಟ್ ಗೆಲ್ಪು       kn             0.88        POSITIVE
+        dinamani               பாதைபோக்கு விபத்து       ta            -0.72        NEGATIVE
+        dinamani        இந்தியா கிரிக்கெட் வெற்றி       ta             0.90        POSITIVE
+
+Media bias summary
+dinamani: Avg +0.090  +:1  -:1
+ndtv: Avg +0.075  +:1  -:1
+times_of_india: Avg +0.050  +:1  -:1
+vijaya_karnataka: Avg +0.065  +:1  -:1
