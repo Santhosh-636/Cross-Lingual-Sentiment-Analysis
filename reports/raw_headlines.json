@@ -1,0 +1,330 @@
+{
+  "times_of_india": {
+    "items": [
+      {
+        "headline": "Live Videos",
+        "language": "en",
+        "link": "https://timesofindia.indiatimes.com/videos"
+      },
+      {
+        "headline": "bhubaneswar",
+        "language": "en",
+        "link": "https://timesofindia.indiatimes.com/city/bhubaneswar"
+      },
+      {
+        "headline": "chandigarh",
+        "language": "en",
+        "link": "https://timesofindia.indiatimes.com/city/chandigarh"
+      },
+      {
+        "headline": "chhatrapati sambhajinagar",
+        "language": "en",
+        "link": "https://timesofindia.indiatimes.com/city/aurangabad"
+      },
+      {
+        "headline": "coimbatore",
+        "language": "en",
+        "link": "https://timesofindia.indiatimes.com/city/coimbatore"
+      },
+      {
+        "headline": "jamshedpur",
+        "language": "en",
+        "link": "https://timesofindia.indiatimes.com/city/jamshedpur"
+      },
+      {
+        "headline": "mumbai region",
+        "language": "en",
+        "link": "https://timesofindia.indiatimes.com/city/mumbai"
+      },
+      {
+        "headline": "navi mumbai",
+        "language": "en",
+        "link": "https://timesofindia.indiatimes.com/city/navi-mumbai"
+      },
+      {
+        "headline": "puducherry",
+        "language": "en",
+        "link": "https://timesofindia.indiatimes.com/city/puducherry"
+      },
+      {
+        "headline": "thiruvananthapuram",
+        "language": "en",
+        "link": "https://timesofindia.indiatimes.com/city/thiruvananthapuram"
+      },
+      {
+        "headline": "vijayawada",
+        "language": "en",
+        "link": "https://timesofindia.indiatimes.com/city/vijayawada"
+      },
+      {
+        "headline": "visakhapatnam",
+        "language": "en",
+        "link": "https://timesofindia.indiatimes.com/city/visakhapatnam"
+      },
+      {
+        "headline": "Web Stories",
+        "language": "en",
+        "link": "https://timesofindia.indiatimes.com/city/web-stories"
+      },
+      {
+        "headline": "Bihar Election 2025",
+        "language": "en",
+        "link": "https://timesofindia.indiatimes.com/elections/assembly-elections/bihar"
+      },
+      {
+        "headline": "Maharashtra",
+        "language": "en",
+        "link": "https://timesofindia.indiatimes.com/india/maharashtra"
+      },
+      {
+        "headline": "West Bengal",
+        "language": "en",
+        "link": "https://timesofindia.indiatimes.com/india/west-bengal"
+      },
+      {
+        "headline": "Tamil Nadu",
+        "language": "en",
+        "link": "https://timesofindia.indiatimes.com/india/tamil-nadu"
+      },
+      {
+        "headline": "Andhra Pradesh",
+        "language": "en",
+        "link": "https://timesofindia.indiatimes.com/india/andhra-pradesh"
+      },
+      {
+        "headline": "Uttar Pradesh",
+        "language": "en",
+        "link": "https://timesofindia.indiatimes.com/india/uttar-pradesh"
+      },
+      {
+        "headline": "Madhya Pradesh",
+        "language": "en",
+        "link": "https://timesofindia.indiatimes.com/india/madhya-pradesh"
+      }
+    ],
+    "used_fallback": false
+  },
+  "ndtv": {
+    "items": [
+      {
+        "headline": "Highway accident claims lives",
+        "language": "en"
+      },
+      {
+        "headline": "India cricket victory celebrated",
+        "language": "en"
+      }
+    ],
+    "used_fallback": true
+  },
+  "vijaya_karnataka": {
+    "items": [
+      {
+        "headline": "Pregatips",
+        "language": "kn",
+        "link": "https://pregatips.com"
+      },
+      {
+        "headline": "ವಿಕ ವಿಶೇಷ",
+        "language": "kn",
+        "link": "https://vijaykarnataka.com/news/vk-special/articlelist/10765223.cms"
+      },
+      {
+        "headline": "ಎನ್‌ಆರ್‌ಐ",
+        "language": "kn",
+        "link": "https://vijaykarnataka.com/news/nri/articlelist/45343958.cms"
+      },
+      {
+        "headline": "ಅಪರಾಧ ಸುದ್ದಿ",
+        "language": "kn",
+        "link": "https://vijaykarnataka.com/news/crime/articlelist/10765232.cms"
+      },
+      {
+        "headline": "ಬೆಂಗಳೂರು ನಾಗರಿಕ ಸೇವೆಗಳು",
+        "language": "kn",
+        "link": "https://vijaykarnataka.com/bengaluru/about-bengaluru-citizens-services"
+      },
+      {
+        "headline": "ಬೆಂಗಳೂರು",
+        "language": "kn",
+        "link": "https://vijaykarnataka.com/news/bengaluru-city/articlelist/11182323.cms"
+      },
+      {
+        "headline": "ಹೊಸ ದಿಲ್ಲಿ",
+        "language": "kn",
+        "link": "https://vijaykarnataka.com/news/new-delhi/articlelist/73171695.cms"
+      },
+      {
+        "headline": "ಹೈದರಾಬಾದ್‌",
+        "language": "kn",
+        "link": "https://vijaykarnataka.com/news/hyderabad/articlelist/73171647.cms"
+      },
+      {
+        "headline": "ಶಿವಮೊಗ್ಗ",
+        "language": "kn",
+        "link": "https://vijaykarnataka.com/news/shivamogga/articlelist/11182146.cms"
+      },
+      {
+        "headline": "ಹುಬ್ಬಳ್ಳಿ-ಧಾರವಾಡ",
+        "language": "kn",
+        "link": "https://vijaykarnataka.com/news/dharawada/articlelist/11182251.cms"
+      },
+      {
+        "headline": "ದಾವಣಗೆರೆ",
+        "language": "kn",
+        "link": "https://vijaykarnataka.com/news/davanagere/articlelist/11182256.cms"
+      },
+      {
+        "headline": "ಉತ್ತರ ಕನ್ನಡ",
+        "language": "kn",
+        "link": "https://vijaykarnataka.com/news/uttara-kannada/articlelist/10780290.cms"
+      },
+      {
+        "headline": "ಬಾಗಲಕೋಟೆ",
+        "language": "kn",
+        "link": "https://vijaykarnataka.com/news/bagalkot/articlelist/11182333.cms"
+      },
+      {
+        "headline": "ಚಿತ್ರದುರ್ಗ",
+        "language": "kn",
+        "link": "https://vijaykarnataka.com/news/chitradurga/articlelist/11182263.cms"
+      },
+      {
+        "headline": "ಕಾಸರಗೋಡು",
+        "language": "kn",
+        "link": "https://vijaykarnataka.com/news/kasaragod/articlelist/11221551.cms"
+      },
+      {
+        "headline": "ಬೆಂಗಳೂರು ಗ್ರಾಮಾಂತರ",
+        "language": "kn",
+        "link": "https://vijaykarnataka.com/news/bengaluru-rural/articlelist/11182317.cms"
+      },
+      {
+        "headline": "ಚಿಕ್ಕಬಳ್ಳಾಪುರ",
+        "language": "kn",
+        "link": "https://vijaykarnataka.com/news/chikkaballapura/articlelist/11182282.cms"
+      },
+      {
+        "headline": "ಚಾಮರಾಜನಗರ",
+        "language": "kn",
+        "link": "https://vijaykarnataka.com/news/chamarajnagara/articlelist/11182285.cms"
+      },
+      {
+        "headline": "ಚಿಕ್ಕಮಗಳೂರು",
+        "language": "kn",
+        "link": "https://vijaykarnataka.com/news/chikkamagaluru/articlelist/11182279.cms"
+      },
+      {
+        "headline": "ಬಿಗ್ ಬಾಸ್",
+        "language": "kn",
+        "link": "https://vijaykarnataka.com/tv/bigg-boss-kannada/articlelist/66259869.cms"
+      }
+    ],
+    "used_fallback": false
+  },
+  "dinamani": {
+    "items": [
+      {
+        "headline": "செய்தி மடல்",
+        "language": "ta",
+        "link": "https://www.dinamani.com/newsletter"
+      },
+      {
+        "headline": "தற்போதைய செய்திகள்",
+        "language": "ta",
+        "link": "https://www.dinamani.com/latest-news"
+      },
+      {
+        "headline": "திரை / சின்னத்திரை",
+        "language": "ta",
+        "link": "https://www.dinamani.com/cinema"
+      },
+      {
+        "headline": "விளையாட்டு",
+        "language": "ta",
+        "link": "https://www.dinamani.com/sports"
+      },
+      {
+        "headline": "வெப் ஸ்டோரிஸ்",
+        "language": "ta",
+        "link": "https://www.dinamani.com/webstories"
+      },
+      {
+        "headline": "ஜோதிடப் பக்கம்",
+        "language": "ta",
+        "link": "https://www.dinamani.com/astrology"
+      },
+      {
+        "headline": "தமிழ்நாடு",
+        "language": "ta",
+        "link": "https://www.dinamani.com/tamilnadu"
+      },
+      {
+        "headline": "முதன்மைச் செய்திகள்",
+        "language": "ta",
+        "link": "/collection/latest-stories"
+      },
+      {
+        "headline": "19 வயது விக்கெட் கீப்பரை ரூ.14 கோடிக்கு ஏலத்தில் எடுத்த சிஎஸ்கே!",
+        "language": "ta",
+        "link": "https://www.dinamani.com/sports/cricket/2025/Dec/16/csk-acquired-the-19-year-old-wicketkeeper-for-rs-14-crore-in-the-auction"
+      },
+      {
+        "headline": "பெண் மருத்துவரின் ஹிஜாப்பை வலுக்கட்டாயமாக விலக்கிய நிதீஷ் குமார்!",
+        "language": "ta",
+        "link": "https://www.dinamani.com/india/2025/Dec/16/nitish-kumar-forcibly-removed-the-female-doctors-hijab"
+      },
+      {
+        "headline": "மோடிக்கு கார் ஓட்டிய ஜோர்டான் இளவரசர்!",
+        "language": "ta",
+        "link": "https://www.dinamani.com/india/2025/Dec/16/the-prince-of-jordan-drove-the-car-for-modi"
+      },
+      {
+        "headline": "தாய்ப் பாலில், நிலத்தடி நீரில் யுரேனியம்! சிறுநீரக பாதிப்பு ஏற்படுமா?",
+        "language": "ta",
+        "link": "https://www.dinamani.com/lifestyle/lifestyle-news/2025/Dec/16/uranium-in-ground-water-and-mothers-breast-milk-what-is-the-risk-behind-this"
+      },
+      {
+        "headline": "கேரள திரைப்பட விழா! மத்திய அரசு அனுமதி மறுத்த படங்களைத் திரையிட முடிவு!",
+        "language": "ta",
+        "link": "https://www.dinamani.com/cinema/cinema-news/2025/Dec/16/at-the-kerala-film-festival-a-decision-has-been-made-to-screen-the-films-that-the-central-government-denied-permission-for"
+      },
+      {
+        "headline": "சென்செக்ஸ், நிஃப்டி சரிவுடன் நிறைவு!",
+        "language": "ta",
+        "link": "https://www.dinamani.com/trade/2025/Dec/16/sensex-tumbles-53350-points"
+      },
+      {
+        "headline": "தற்போதைய     செய்திகள்",
+        "language": "ta",
+        "link": "https://www.dinamani.com/latest-news"
+      },
+      {
+        "headline": "ஜம்மு - காஷ்மீர் ஆல்ரவுண்டரை ரூ. 8 கோடிக்கு ஏலத்தில் எடுத்த தில்லி கேபிடல்ஸ்!",
+        "language": "ta",
+        "link": "https://www.dinamani.com/sports/cricket/2025/Dec/16/delhi-capitals-acquired-the-jammu-and-kashmir-all-rounder-for-rs-8-crore-in-the-auction"
+      },
+      {
+        "headline": "20 வயது இளம் ஆல்ரவுண்டரை ரூ.14 கோடிக்கு ஏலத்தில் எடுத்த சிஎஸ்கே!",
+        "language": "ta",
+        "link": "https://www.dinamani.com/sports/cricket/2025/Dec/16/csk-acquired-the-20-year-old-young-all-rounder-for-rs-14-crore-in-the-auction"
+      },
+      {
+        "headline": "சிறப்புச் செய்திகள் | கட்டுரைகள்",
+        "language": "ta",
+        "link": "/collection/special-stories-articles"
+      },
+      {
+        "headline": "சொல்லப் போனால்... எடப்பாடி வைத்த செக்! நான்கா, ஐந்தா கூட்டணிகள்?",
+        "language": "ta",
+        "link": "https://www.dinamani.com/editorial-articles/special-stories/2025/Dec/14/news-in-other-words-72-the-check-that-edappadi-palanisamy-has-made-four-or-five-alliances-in-tn-assembly-elections"
+      },
+      {
+        "headline": "டிரம்பின் தங்க அட்டை திட்டம்! அப்ளை நௌ என்றால் உடனே குடியுரிமை என அர்த்தமில்லையா?",
+        "language": "ta",
+        "link": "https://www.dinamani.com/india/2025/Dec/12/trumps-gold-card-plan-doesnt-apply-now-mean-instant-citizenship"
+      }
+    ],
+    "used_fallback": false
+  }
+}
