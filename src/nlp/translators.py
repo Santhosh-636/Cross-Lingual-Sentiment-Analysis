@@ -1,7 +1,12 @@
 def translate_text(text, target_language):
-    # Placeholder function for translating text
-    # This function should implement translation logic using a translation library or API
-    pass
+    try:
+        from googletrans import Translator
+        translator = Translator()
+        res = translator.translate(text, dest=target_language)
+        return res.text
+    except Exception:
+        # fallback: return original text if translation fails
+        return text
 
 def translate_headlines(headlines, target_language):
     translated_headlines = []
@@ -11,9 +16,13 @@ def translate_headlines(headlines, target_language):
     return translated_headlines
 
 def detect_language(text):
-    # Placeholder function for detecting the language of the text
-    # This function should implement language detection logic
-    pass
+    try:
+        from googletrans import Translator
+        translator = Translator()
+        res = translator.detect(text)
+        return res.lang
+    except Exception:
+        return 'en'
 
 def translate_to_all_languages(headlines):
     languages = ['en', 'hi', 'bn', 'kn']  # English, Hindi, Bengali, Kannada

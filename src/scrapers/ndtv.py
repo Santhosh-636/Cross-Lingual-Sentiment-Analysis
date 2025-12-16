@@ -3,26 +3,39 @@ from bs4 import BeautifulSoup
 
 def scrape_ndtv_headlines():
     url = 'https://www.ndtv.com/'
-    response = requests.get(url)
-    
-    if response.status_code != 200:
-        raise Exception(f"Failed to load page {url}")
+    headers = {'User-Agent': 'Mozilla/5.0'}
+    try:
+        response = requests.get(url, headers=headers, timeout=10)
+        response.raise_for_status()
+    except Exception:
+        return []
 
     soup = BeautifulSoup(response.content, 'html.parser')
     headlines = []
 
-    for item in soup.find_all('h2', class_='newsHdng'):
-        headline = item.get_text(strip=True)
-        link = item.find('a')['href']
-        headlines.append({'headline': headline, 'link': link})
+    # NDTV uses h2 elements with class that may vary; search for common patterns
+    for item in soup.find_all(['h2', 'h3', 'a']):
+        text = item.get_text(strip=True)
+        if not text or len(text) < 10:
+            continue
+        link = None
+        a = item.find('a') if item.name != 'a' else item
+        if a and a.has_attr('href'):
+            link = a['href']
+        headlines.append({'headline': text, 'link': link, 'language': 'en'})
 
-    return headlines
+    # Deduplicate while preserving order
+    seen = set()
+    filtered = []
+    for h in headlines:
+        if h['headline'] in seen:
+            continue
+        seen.add(h['headline'])
+        filtered.append(h)
 
-def scrape_ndtv_metadata():
-    # This function can be expanded to scrape additional metadata if needed
-    return None
+    return filtered[:20]
+
 
 if __name__ == "__main__":
-    headlines = scrape_ndtv_headlines()
-    for headline in headlines:
-        print(headline)
+    for h in scrape_ndtv_headlines():
+        print(h)
