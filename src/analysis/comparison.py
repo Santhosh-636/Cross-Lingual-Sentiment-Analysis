@@ -63,15 +63,7 @@ def calculate_source_bias(comparison_df):
     return bias_metrics
 
 def find_sentiment_divergence(comparison_df):
-    """
-    Identify headlines where sentiment differs significantly across sources.
-
-    Parameters:
-    comparison_df (pd.DataFrame): Comparison dataframe
-
-    Returns:
-    pd.DataFrame: Headlines with high sentiment divergence
-    """
+    
     divergence_threshold = 0.5
     high_divergence = comparison_df[
         abs(comparison_df['sentiment_shift']) > divergence_threshold
@@ -80,16 +72,7 @@ def find_sentiment_divergence(comparison_df):
     return high_divergence
 
 def visualize_sentiment_comparison(comparison_df, bias_metrics):
-    """
-    Prepare data for visualization of sentiment comparison across media sources.
-
-    Parameters:
-    comparison_df (pd.DataFrame): Comparison dataframe
-    bias_metrics (dict): Bias metrics per source
-
-    Returns:
-    dict: Data structured for plotting
-    """
+    
     viz_data = {
         'comparison_df': comparison_df,
         'bias_metrics': bias_metrics,

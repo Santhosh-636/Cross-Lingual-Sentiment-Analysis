@@ -7,6 +7,13 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import pandas as pd
 
+# Configuration: change to True to show neutral headlines as well
+# User requested sentiment/emotion for all available headlines, enable by default
+SHOW_NEUTRAL = True
+# minimum absolute confidence/score to consider non-neutral (0..1)
+CONFIDENCE_THRESHOLD = 0.15
+
+
 def try_scrape(module_name, candidates):
     """Import scraper module and try candidate functions. If none found,
     try any callable in the module starting with 'scrape'. Normalize
@@ -68,6 +75,55 @@ def normalize_scraper_output(out, default_lang='en'):
                     row['link'] = item['link']
                 results.append(row)
     return results
+
+
+def is_meaningful_headline(text):
+    """Heuristic filter to exclude nav links, single-word places, and very short items."""
+    if not text or len(text.strip()) < 8:
+        return False
+    low = text.lower()
+    # exclude obvious nav items
+    for bad in ('live', 'live videos', 'videos', 'photos', 'latest', 'more', 'home'):
+        if low.strip() == bad or low.startswith(bad + ' '):
+            return False
+    # require at least 3 words or contain event keywords
+    words = [w for w in low.split() if w.isalpha()]
+    if len(words) >= 3 or len(text) >= 30:
+        return True
+    event_keywords = ('bomb','blast','attack','killed','dies','death','murder','fire','crash','accident','violence','clash','protest','win','victory','dead','injured','shooting')
+    for kw in event_keywords:
+        if kw in low:
+            return True
+    return False
+
+
+def infer_emotion(headline, sentiment_score):
+    """Map sentiment score + headline keywords to human-readable emotion label."""
+    low = headline.lower()
+    event_keywords_fear = ('bomb','blast','attack','shooting','explosion')
+    if sentiment_score <= -0.5:
+        base = 'Sad'
+    elif sentiment_score < -0.15:
+        base = 'Sad'
+    elif sentiment_score <= 0.15:
+        base = 'Neutral'
+    elif sentiment_score <= 0.5:
+        base = 'Happy'
+    else:
+        base = 'Very Happy'
+
+    for kw in event_keywords_fear:
+        if kw in low and base != 'Very Happy':
+            return base + '/Fear'
+    return base
+
+
+def has_event_keyword(text):
+    if not text:
+        return False
+    low = text.lower()
+    event_keywords = ('bomb','blast','attack','killed','dies','death','murder','fire','crash','accident','violence','clash','protest','injured','shooting','explosion','blast','terror')
+    return any(kw in low for kw in event_keywords)
 
 # Attempt to scrape; fall back to sample data if scraper missing/failing
 headlines = {}
@@ -185,10 +241,33 @@ for src in df['source'].unique():
     print(f"\n{src.replace('_',' ').upper()}")
     print("-"*40)
     sub = df[df['source'] == src]
-    for _, r in sub.iterrows():
-        emoji = "😔" if r['sentiment_label'] == 'NEGATIVE' else "😊" if r['sentiment_label'] == 'POSITIVE' else "😐"
-        print(f"{emoji} [{r['language'].upper()}] {r['headline']}")
-        print(f"    Score: {r['sentiment_score']:+.2f}  Label: {r['sentiment_label']}")
+    # filter to meaningful headlines for display and remove neutral/noisy items
+    rows_list = list(sub.to_dict('records'))
+    filtered = []
+    for r in rows_list:
+        text = (r.get('translated_headline') or r.get('headline') or '').strip()
+        if not is_meaningful_headline(text):
+            continue
+        score = r.get('sentiment_score', 0.0)
+        conf = abs(score)
+        # include if strong sentiment or contains event keyword, or if SHOW_NEUTRAL enabled
+        if SHOW_NEUTRAL or conf >= CONFIDENCE_THRESHOLD or has_event_keyword(text):
+            filtered.append(r)
+
+    if not filtered:
+        print("  No strong emotion-bearing headlines found.")
+    else:
+        for r in filtered:
+            orig = r.get('headline')
+            trans = r.get('translated_headline')
+            score = r.get('sentiment_score', 0.0)
+            label = r.get('sentiment_label', 'NEUTRAL')
+            emotion = infer_emotion(trans or orig, score)
+            # concise output
+            print(f"  - {orig}")
+            if trans and trans != orig:
+                print(f"     (Translated) {trans}")
+            print(f"     People emotions: {emotion}  — Score: {score:+.2f}")
     print()
 
 print("\n" + "="*80)
