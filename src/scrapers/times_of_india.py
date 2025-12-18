@@ -1,40 +1,23 @@
 import requests
-from bs4 import BeautifulSoup
+import xml.etree.ElementTree as ET
 
 def scrape_times_of_india():
-    url = 'https://timesofindia.indiatimes.com/'
-    headers = {'User-Agent': 'Mozilla/5.0'}
+    url = "https://timesofindia.indiatimes.com/rssfeedstopstories.cms"
     try:
-        response = requests.get(url, headers=headers, timeout=10)
+        response = requests.get(url, timeout=10)
         response.raise_for_status()
-    except Exception:
+    except Exception as e:
+        print("TOI RSS request failed:", e)
         return []
 
-    soup = BeautifulSoup(response.text, 'html.parser')
     headlines = []
+    root = ET.fromstring(response.content)
+    for item in root.findall('.//item')[:20]:
+        title = item.find('title').text
+        link = item.find('link').text
+        headlines.append({'headline': title, 'link': link, 'language': 'en'})
 
-    # Collect possible headline tags and anchors
-    for tag in soup.find_all(['h2', 'h3', 'a']):
-        text = tag.get_text(strip=True)
-        if not text or len(text) < 10:
-            continue
-        link = None
-        a = tag.find('a') if tag.name != 'a' else tag
-        if a and a.has_attr('href'):
-            link = a['href']
-        headlines.append({'headline': text, 'link': link, 'language': 'en'})
-
-    # Deduplicate
-    seen = set()
-    out = []
-    for h in headlines:
-        if h['headline'] in seen:
-            continue
-        seen.add(h['headline'])
-        out.append(h)
-
-    return out[:20]
-
+    return headlines
 
 if __name__ == "__main__":
     for h in scrape_times_of_india():
