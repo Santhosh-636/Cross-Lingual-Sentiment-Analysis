@@ -15,7 +15,7 @@ def scrape_times_of_india():
     for item in root.findall('.//item')[:20]:
         title = item.find('title').text
         link = item.find('link').text
-        headlines.append({'headline': title, 'link': link, 'language': 'en'})
+        headlines.append({'Headline': title, 'Link': link, 'Language': 'en'})
 
     return headlines
 
